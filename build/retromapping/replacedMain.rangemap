@@ -1,0 +1,44 @@
+Symbol range map extraction starting
+Processing 1 files
+processing com\github\creeper123123321\viafabric\injection\MixinLoader.java
+@|com\github\creeper123123321\viafabric\injection\MixinLoader.java|8|55|com.github.creeper123123321.viafabric.injection|package|com.github.creeper123123321.viafabric.injection|(file)
+Class Start: com.github.creeper123123321.viafabric.injection.MixinLoader
+   Method Start: MixinLoader()V
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|358|369|MixinLoader|method|com.github.creeper123123321.viafabric.injection.MixinLoader|MixinLoader|()V
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|382|396|MixinBootstrap|class|org.spongepowered.asm.launch.MixinBootstrap
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|397|401|init|method|org.spongepowered.asm.launch.MixinBootstrap|init|()V
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|413|419|Mixins|class|org.spongepowered.asm.mixin.Mixins
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|420|436|addConfiguration|method|org.spongepowered.asm.mixin.Mixins|addConfiguration|(Ljava/lang/String;)V
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|470|486|MixinEnvironment|class|org.spongepowered.asm.mixin.MixinEnvironment
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|487|508|getDefaultEnvironment|method|org.spongepowered.asm.mixin.MixinEnvironment|getDefaultEnvironment|()Lorg/spongepowered/asm/mixin/MixinEnvironment;
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|511|518|setSide|method|org.spongepowered.asm.mixin.MixinEnvironment|setSide|(Lorg/spongepowered/asm/mixin/MixinEnvironment$Side;)Lorg/spongepowered/asm/mixin/MixinEnvironment;
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|519|540|MixinEnvironment.Side|class|org.spongepowered.asm.mixin.MixinEnvironment.Side
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|541|547|CLIENT|field|org.spongepowered.asm.mixin.MixinEnvironment.Side|CLIENT
+   Method End: MixinLoader()V
+   Method Start: getASMTransformerClass()[Ljava/lang/String;
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|591|613|getASMTransformerClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getASMTransformerClass|()[Ljava/lang/String;
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|582|588|String|class|java.lang.String
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|637|643|String|class|java.lang.String
+   Method End: getASMTransformerClass()[Ljava/lang/String;
+   Method Start: getModContainerClass()Ljava/lang/String;
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|687|707|getModContainerClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getModContainerClass|()Ljava/lang/String;
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|680|686|String|class|java.lang.String
+   Method End: getModContainerClass()Ljava/lang/String;
+   Method Start: getSetupClass()Ljava/lang/String;
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|772|785|getSetupClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getSetupClass|()Ljava/lang/String;
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|765|771|String|class|java.lang.String
+   Method End: getSetupClass()Ljava/lang/String;
+   Method Start: injectData(Ljava/util/Map;)V
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|848|858|injectData|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|injectData|(Ljava/util/Map;)V
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|863|869|String|class|java.lang.String
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|871|877|Object|class|java.lang.Object
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|859|862|Map|class|java.util.Map
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|879|883|data|param|com.github.creeper123123321.viafabric.injection.MixinLoader|injectData|(Ljava/util/Map;)V|data|0
+   Method End: injectData(Ljava/util/Map;)V
+   Method Start: getAccessTransformerClass()Ljava/lang/String;
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|922|947|getAccessTransformerClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getAccessTransformerClass|()Ljava/lang/String;
+      @|com\github\creeper123123321\viafabric\injection\MixinLoader.java|915|921|String|class|java.lang.String
+   Method End: getAccessTransformerClass()Ljava/lang/String;
+Class End  : com.github.creeper123123321.viafabric.injection.MixinLoader
+endProcessing com\github\creeper123123321\viafabric\injection\MixinLoader.java
+

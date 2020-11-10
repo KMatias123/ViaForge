@@ -25,112 +25,81 @@
 
 package com.github.creeper123123321.viafabric;
 
-import com.github.creeper123123321.viafabric.commands.VRCommandHandler;
-import com.github.creeper123123321.viafabric.config.VRConfig;
 import com.github.creeper123123321.viafabric.platform.VRInjector;
 import com.github.creeper123123321.viafabric.platform.VRLoader;
 import com.github.creeper123123321.viafabric.platform.VRPlatform;
-import com.github.creeper123123321.viafabric.protocol.ViaFabricHostnameProtocol;
 import com.github.creeper123123321.viafabric.util.JLoggerToLog4j;
-import com.google.common.collect.Range;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import com.mojang.brigadier.arguments.StringArgumentType;
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import com.mojang.brigadier.builder.RequiredArgumentBuilder;
-import io.netty.channel.DefaultEventLoop;
+import de.flori2007.viaforge.platform.ViaBackwardsPlatformImplementation;
+import de.flori2007.viaforge.platform.ViaRewindPlatformImplementation;
 import io.netty.channel.EventLoop;
-import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
-import net.fabricmc.fabric.api.registry.CommandRegistry;
-import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.server.command.CommandSource;
+import io.netty.channel.local.LocalEventLoopGroup;
+import net.minecraft.client.Minecraft;
 import org.apache.logging.log4j.LogManager;
+import sun.misc.URLClassPath;
 import us.myles.ViaVersion.ViaManager;
 import us.myles.ViaVersion.api.Via;
 import us.myles.ViaVersion.api.data.MappingDataLoader;
-import us.myles.ViaVersion.api.protocol.ProtocolRegistry;
-import us.myles.ViaVersion.api.protocol.ProtocolVersion;
 
+import java.io.File;
+import java.lang.reflect.Field;
+import java.net.MalformedURLException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.logging.Logger;
 
-public class ViaFabric implements ModInitializer {
+public class ViaFabric {
+
+    public static int clientSideVersion = 47;
+
     public static final Logger JLOGGER = new JLoggerToLog4j(LogManager.getLogger("ViaFabric"));
     public static final ExecutorService ASYNC_EXECUTOR;
     public static final EventLoop EVENT_LOOP;
     public static CompletableFuture<Void> INIT_FUTURE = new CompletableFuture<>();
-    public static VRConfig config;
 
     static {
         ThreadFactory factory = new ThreadFactoryBuilder().setDaemon(true).setNameFormat("ViaFabric-%d").build();
         ASYNC_EXECUTOR = Executors.newFixedThreadPool(8, factory);
-        EVENT_LOOP = new DefaultEventLoop(factory);
+        EVENT_LOOP = new LocalEventLoopGroup(1, factory).next(); // ugly code
         EVENT_LOOP.submit(INIT_FUTURE::join); // https://github.com/ViaVersion/ViaFabric/issues/53 ugly workaround code but works tm
     }
 
     public static String getVersion() {
-        return FabricLoader.getInstance().getModContainer("viafabric")
-                .get().getMetadata().getVersion().getFriendlyString();
+        return "1.0";
     }
 
-    public static <S extends CommandSource> LiteralArgumentBuilder<S> command(String commandName) {
-        return LiteralArgumentBuilder.<S>literal(commandName)
-                .then(
-                        RequiredArgumentBuilder
-                                .<S, String>argument("args", StringArgumentType.greedyString())
-                                .executes(((VRCommandHandler) Via.getManager().getCommandHandler())::execute)
-                                .suggests(((VRCommandHandler) Via.getManager().getCommandHandler())::suggestion)
-                )
-                .executes(((VRCommandHandler) Via.getManager().getCommandHandler())::execute);
-    }
+    public void onInitialize() throws IllegalAccessException, NoSuchFieldException, MalformedURLException {
 
-    @Override
-    public void onInitialize() {
+        loadVia();
+
         Via.init(ViaManager.builder()
                 .injector(new VRInjector())
                 .loader(new VRLoader())
-                .commandHandler(new VRCommandHandler())
                 .platform(new VRPlatform()).build());
 
-        FabricLoader.getInstance().getModContainer("viabackwards").ifPresent(mod -> MappingDataLoader.enableMappingsCache());
+        MappingDataLoader.enableMappingsCache();
+        new ViaBackwardsPlatformImplementation();
+        new ViaRewindPlatformImplementation();
 
         Via.getManager().init();
-
-        ProtocolRegistry.registerBaseProtocol(ViaFabricHostnameProtocol.INSTANCE, Range.lessThan(Integer.MIN_VALUE));
-        ProtocolVersion.register(-2, "AUTO");
-
-        FabricLoader.getInstance().getEntrypoints("viafabric:via_api_initialized", Runnable.class).forEach(Runnable::run);
-
-        try {
-            registerCommandsV1();
-        } catch (NoClassDefFoundError ignored) {
-            try {
-                registerCommandsV0();
-                JLOGGER.info("Using Fabric Commands V0");
-            } catch (NoClassDefFoundError ignored2) {
-                JLOGGER.info("Couldn't register command as Fabric Commands isn't installed");
-            }
-        }
-
-        config = new VRConfig(FabricLoader.getInstance().getConfigDirectory().toPath().resolve("ViaFabric")
-                .resolve("viafabric.yml").toFile());
 
         INIT_FUTURE.complete(null);
     }
 
-    private void registerCommandsV1() {
-        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> dispatcher.register(command("viaversion")));
-        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> dispatcher.register(command("viaver")));
-        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> dispatcher.register(command("vvfabric")));
-    }
-
-    @SuppressWarnings("deprecation")
-    private void registerCommandsV0() {
-        CommandRegistry.INSTANCE.register(false, dispatcher -> dispatcher.register(command("viaversion")));
-        CommandRegistry.INSTANCE.register(false, dispatcher -> dispatcher.register(command("viaver")));
-        CommandRegistry.INSTANCE.register(false, dispatcher -> dispatcher.register(command("vvfabric")));
+    public void loadVia() throws NoSuchFieldException, IllegalAccessException, MalformedURLException {
+        ClassLoader loader = ClassLoader.getSystemClassLoader();
+        Field addUrl = loader.getClass().getDeclaredField("ucp");
+        addUrl.setAccessible(true);
+        URLClassPath ucp = (URLClassPath) addUrl.get(loader);
+        final File[] files = new File(Minecraft.getMinecraft().mcDataDir, "mods").listFiles();
+        if (files != null) {
+            for (final File f : files) {
+                if (f.isFile() && f.getName().startsWith("Via") && f.getName().toLowerCase().endsWith(".jar")) {
+                    ucp.addURL(f.toURI().toURL());
+                }
+            }
+        }
     }
 }

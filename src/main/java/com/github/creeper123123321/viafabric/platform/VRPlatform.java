@@ -26,25 +26,13 @@
 package com.github.creeper123123321.viafabric.platform;
 
 import com.github.creeper123123321.viafabric.ViaFabric;
-import com.github.creeper123123321.viafabric.commands.NMSCommandSender;
-import com.github.creeper123123321.viafabric.commands.UserCommandSender;
 import com.github.creeper123123321.viafabric.util.FutureTaskId;
 import com.github.creeper123123321.viafabric.util.JLoggerToLog4j;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.fabricmc.loader.api.FabricLoader;
-import net.fabricmc.loader.api.ModContainer;
-import net.fabricmc.loader.api.Version;
-import net.fabricmc.loader.api.metadata.ModMetadata;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.entity.Entity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.Text;
 import org.apache.logging.log4j.LogManager;
-import us.myles.ViaVersion.api.Via;
 import us.myles.ViaVersion.api.ViaAPI;
 import us.myles.ViaVersion.api.ViaVersionConfig;
 import us.myles.ViaVersion.api.command.ViaCommandSender;
@@ -52,25 +40,18 @@ import us.myles.ViaVersion.api.configuration.ConfigurationProvider;
 import us.myles.ViaVersion.api.platform.TaskId;
 import us.myles.ViaVersion.api.platform.ViaConnectionManager;
 import us.myles.ViaVersion.api.platform.ViaPlatform;
-import us.myles.ViaVersion.dump.PluginInfo;
-import us.myles.ViaVersion.sponge.VersionInfo;
-import us.myles.ViaVersion.util.GsonUtil;
 import us.myles.viaversion.libs.bungeecordchat.api.chat.TextComponent;
 import us.myles.viaversion.libs.bungeecordchat.chat.ComponentSerializer;
 import us.myles.viaversion.libs.gson.JsonObject;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.Callable;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Supplier;
-import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 public class VRPlatform implements ViaPlatform<UUID> {
     private final Logger logger = new JLoggerToLog4j(LogManager.getLogger("ViaVersion"));
@@ -80,7 +61,7 @@ public class VRPlatform implements ViaPlatform<UUID> {
     private final ViaAPI<UUID> api;
 
     public VRPlatform() {
-        Path configDir = FabricLoader.getInstance().getConfigDirectory().toPath().resolve("ViaFabric");
+        Path configDir = Minecraft.getMinecraft().mcDataDir.toPath().resolve("ViaFabric");
         config = new VRViaConfig(configDir.resolve("viaversion.yml").toFile());
         dataFolder = configDir.toFile();
         connectionManager = new VRConnectionManager();
@@ -88,15 +69,9 @@ public class VRPlatform implements ViaPlatform<UUID> {
     }
 
     public static MinecraftServer getServer() {
-        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
-            return getIntegratedServer();
-        }
-        return (MinecraftServer) FabricLoader.getInstance().getGameInstance();
-    }
-
-    @Environment(EnvType.CLIENT)
-    private static MinecraftServer getIntegratedServer() {
-        return MinecraftClient.getInstance().getServer();
+        // In 1.8.9 integrated server instance exists even if it's not running
+        if (!Minecraft.getMinecraft().isIntegratedServerRunning()) return null;
+        return MinecraftServer.getServer();
     }
 
     @Override
@@ -116,8 +91,7 @@ public class VRPlatform implements ViaPlatform<UUID> {
 
     @Override
     public String getPluginVersion() {
-        return FabricLoader.getInstance().getModContainer("viaversion").map(ModContainer::getMetadata)
-                .map(ModMetadata::getVersion).map(Version::getFriendlyString).orElse("UNKNOWN");
+        return "3.3.0";
     }
 
     @Override
@@ -144,7 +118,11 @@ public class VRPlatform implements ViaPlatform<UUID> {
 
     private TaskId runServerSync(Runnable runnable) {
         // Kick task needs to be on main thread, it does already have error logger
-        return new FutureTaskId(CompletableFuture.runAsync(runnable, getServer()));
+        return new FutureTaskId(CompletableFuture.runAsync(runnable, it -> getServer().callFromMainThread((Callable
+                <Void>) () -> {
+            it.run();
+            return null;
+        })));
     }
 
     private TaskId runEventLoop(Runnable runnable) {
@@ -192,37 +170,11 @@ public class VRPlatform implements ViaPlatform<UUID> {
 
     @Override
     public ViaCommandSender[] getOnlinePlayers() {
-        MinecraftServer server = getServer();
-        if (server != null && server.isOnThread()) {
-            return getServerPlayers();
-        }
-        return Via.getManager().getConnectedClients().values().stream()
-                .map(UserCommandSender::new)
-                .toArray(ViaCommandSender[]::new);
-    }
-
-    private ViaCommandSender[] getServerPlayers() {
-        return getServer().getPlayerManager().getPlayerList().stream()
-                .map(Entity::getCommandSource)
-                .map(NMSCommandSender::new)
-                .toArray(ViaCommandSender[]::new);
+        return new ViaCommandSender[0];
     }
 
     @Override
     public void sendMessage(UUID uuid, String s) {
-        sendMessageServer(uuid, s);
-    }
-
-    private void sendMessageServer(UUID uuid, String s) {
-        MinecraftServer server = getServer();
-        if (server == null) return;
-        runServerSync(() -> {
-            ServerPlayerEntity player = server.getPlayerManager().getPlayer(uuid);
-            if (player == null) return;
-            player.sendMessage(Text.Serializer.fromJson(
-                    legacyToJson(s)
-            ), false);
-        });
     }
 
     @Override
@@ -231,20 +183,6 @@ public class VRPlatform implements ViaPlatform<UUID> {
     }
 
     private boolean kickServer(UUID uuid, String s) {
-        MinecraftServer server = getServer();
-        if (server == null) return false;
-        Supplier<Boolean> kickTask = () -> {
-            ServerPlayerEntity player = server.getPlayerManager().getPlayer(uuid);
-            if (player == null) return false;
-            player.networkHandler.disconnect(Text.Serializer.fromJson(legacyToJson(s)));
-            return true;
-        };
-        if (server.isOnThread()) {
-            return kickTask.get();
-        } else {
-            ViaFabric.JLOGGER.log(Level.WARNING, "Weird!? Player kicking was called off-thread", new Throwable());
-            runServerSync(kickTask::get);
-        }
         return false;  // Can't know if it worked
     }
 
@@ -280,22 +218,7 @@ public class VRPlatform implements ViaPlatform<UUID> {
 
     @Override
     public JsonObject getDump() {
-        JsonObject platformSpecific = new JsonObject();
-        List<PluginInfo> mods = new ArrayList<>();
-        for (ModContainer mod : FabricLoader.getInstance().getAllMods()) {
-            mods.add(new PluginInfo(true,
-                    mod.getMetadata().getId() + " (" + mod.getMetadata().getName() + ")",
-                    mod.getMetadata().getVersion().getFriendlyString(),
-                    null,
-                    mod.getMetadata().getAuthors().stream()
-                            .map(info -> info.getName()
-                                    + (info.getContact().asMap().isEmpty() ? "" : " " + info.getContact().asMap()))
-                            .collect(Collectors.toList())
-            ));
-        }
-
-        platformSpecific.add("mods", GsonUtil.getGson().toJsonTree(mods));
-        return platformSpecific;
+        return new JsonObject();
     }
 
     @Override

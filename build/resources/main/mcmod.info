@@ -1,0 +1,16 @@
+[
+{
+  "modid": "viaforge",
+  "name": "ViaForge",
+  "description": "",
+  "version": "b1",
+  "mcversion": "1.8.9",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["creeper123123321", "Flori2007"],
+  "credits": "The ViaVersion and ViaFabric guys, for making ViaFabric (client-side implementation for Fabric)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
