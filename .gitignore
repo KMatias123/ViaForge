@@ -1,0 +1,36 @@
+# gradle
+
+.gradle/
+build/
+out/
+classes/
+
+# eclipse
+
+*.launch
+
+# idea
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+# fabric
+
+run/
+
+# Cipher Exporter
+
+EXPORT_SCRIPT.bat
+Exporter.jar
+tmp_export
+Cipher_Export.jar

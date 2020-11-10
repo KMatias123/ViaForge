@@ -1,97 +1,97 @@
-[16:38:20] [main/INFO]: Extra: []
-[16:38:20] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/jessi/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
-[16:38:20] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[16:38:20] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[16:38:20] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
-[16:38:20] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[16:38:20] [main/INFO]: Forge Mod Loader version 11.15.1.2318 for Minecraft 1.8.9 loading
-[16:38:20] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_251, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_251\jre
-[16:38:20] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[16:38:20] [main/INFO]: Found a command line coremod : com.github.creeper123123321.viafabric.injection.MixinLoader
-[16:38:20] [main/WARN]: The coremod com.github.creeper123123321.viafabric.injection.MixinLoader does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[16:38:20] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.7.10 Source=file:/C:/Users/jessi/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.10-SNAPSHOT/db99723868016630419bf62afa24109bd6236073/mixin-0.7.10-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
-[16:38:21] [main/INFO]: Compatibility level set to JAVA_8
-[16:38:21] [main/ERROR]: Mixin config mixins.viaforge.json does not specify "minVersion" property
-[16:38:21] [main/DEBUG]: Enqueued coremod MixinLoader
-[16:38:21] [main/DEBUG]: Attempting to load commandline specified mods, relative to D:\Windows\Betirebssystem 2020.2\Desktop\ViaForge\run\.
-[16:38:21] [main/DEBUG]: Discovering coremods
-[16:38:21] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
-[16:38:21] [main/INFO]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
-[16:38:21] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
-[16:38:21] [main/INFO]: Injecting location in coremod com.github.creeper123123321.viafabric.injection.MixinLoader
-[16:38:21] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[16:38:21] [main/INFO]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[16:38:21] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[16:38:21] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
-[16:38:21] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[16:38:21] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[16:38:21] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:38:21] [main/DEBUG]: Injecting coremod FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin} class transformers
-[16:38:21] [main/TRACE]: Registering transformer net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
-[16:38:21] [main/TRACE]: Registering transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer
-[16:38:21] [main/TRACE]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriptionTransformer
-[16:38:21] [main/TRACE]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriberTransformer
-[16:38:21] [main/DEBUG]: Injection complete
-[16:38:21] [main/DEBUG]: Running coremod plugin for FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin}
-[16:38:21] [main/DEBUG]: Running coremod plugin FMLCorePlugin
-[16:38:21] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
-[16:38:21] [main/DEBUG]: Loading deobfuscation resource C:\Users\jessi\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_stable\22\srgs\srg-mcp.srg with 27884 records
-[16:38:23] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
-[16:38:23] [main/DEBUG]: Coremod plugin class FMLCorePlugin run successfully
-[16:38:23] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:38:23] [main/DEBUG]: Injecting coremod FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin} class transformers
-[16:38:23] [main/DEBUG]: Injection complete
-[16:38:23] [main/DEBUG]: Running coremod plugin for FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin}
-[16:38:23] [main/DEBUG]: Running coremod plugin FMLForgePlugin
-[16:38:23] [main/DEBUG]: Coremod plugin class FMLForgePlugin run successfully
-[16:38:23] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:38:23] [main/DEBUG]: Injecting coremod MixinLoader {com.github.creeper123123321.viafabric.injection.MixinLoader} class transformers
-[16:38:23] [main/DEBUG]: Injection complete
-[16:38:23] [main/DEBUG]: Running coremod plugin for MixinLoader {com.github.creeper123123321.viafabric.injection.MixinLoader}
-[16:38:23] [main/DEBUG]: Running coremod plugin MixinLoader
-[16:38:23] [main/DEBUG]: Coremod plugin class MixinLoader run successfully
-[16:38:23] [main/INFO]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[16:38:23] [main/INFO]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@3db663d0
-[16:38:23] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[16:38:23] [main/DEBUG]: Loaded 165 rules from AccessTransformer config file forge_at.cfg
-[16:38:23] [main/DEBUG]: Validating minecraft
-[16:38:24] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
-[16:38:24] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[16:38:24] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[16:38:24] [main/WARN]: Reference map 'mixins.viaforge.refmap.json' for mixins.viaforge.json could not be read. If this is a development environment you can ignore this message
-[16:38:25] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[16:38:26] [Client thread/INFO]: Setting user: Player947
-[16:38:32] [Client thread/INFO]: Loading translations...
-[16:38:32] [Client thread/INFO]: Registering protocols...
-[16:38:35] [Via-Mappingloader-0/INFO]: Loading 1.12 -> 1.13 mappings...
-[16:38:35] [Via-Mappingloader-1/INFO]: Loading 1.13 -> 1.13.2 mappings...
-[16:38:35] [Via-Mappingloader-0/INFO]: Loading block connection mappings ...
-[16:38:35] [Via-Mappingloader-2/INFO]: Loading 1.13.2 -> 1.14 mappings...
-[16:38:35] [Via-Mappingloader-3/INFO]: Loading 1.14 -> 1.15 mappings...
-[16:38:36] [Via-Mappingloader-4/INFO]: Loading 1.15 -> 1.16 mappings...
-[16:38:36] [Via-Mappingloader-4/INFO]: Loading 1.16 -> 1.16.2 mappings...
-[16:38:36] [Via-Mappingloader-3/INFO]: Loading 1.16.2 -> 1.17 mappings...
-[16:38:36] [Via-Mappingloader-0/INFO]: Loading 1.13 -> 1.12 mappings...
-[16:38:37] [Via-Mappingloader-0/INFO]: Loading 1.13.2 -> 1.13 mappings...
-[16:38:37] [Via-Mappingloader-0/INFO]: Loading 1.14 -> 1.13.2 mappings...
-[16:38:37] [Via-Mappingloader-0/INFO]: Loading 1.15 -> 1.14 mappings...
-[16:38:37] [Via-Mappingloader-0/INFO]: Loading 1.16 -> 1.15 mappings...
-[16:38:37] [Via-Mappingloader-0/INFO]: Loading 1.16.2 -> 1.16 mappings...
-[16:38:37] [Via-Mappingloader-0/INFO]: Loading 1.17 -> 1.16.2 mappings...
-[16:38:39] [ViaFabric-0/INFO]: ViaVersion detected server version: 1.8.x(47)
-[16:38:39] [ViaFabric-0/WARN]: This version of Minecraft is over half a decade old and support for it will be fully dropped eventually. Please upgrade to a newer version to avoid encountering bugs and stability issues that have long been fixed.
-[16:38:39] [ViaFabric-0/INFO]: Shutting down mapping loader executor!
-[16:38:39] [Client thread/INFO]: LWJGL Version: 2.9.4
-[16:38:40] [ViaFabric-0/WARN]: You are running a newer version than is released!
-[16:38:40] [Client thread/WARN]: =============================================================
-[16:38:40] [Client thread/WARN]: MOD HAS DIRECT REFERENCE System.exit() THIS IS NOT ALLOWED REROUTING TO FML!
-[16:38:40] [Client thread/WARN]: Offendor: com/sun/jna/Native.main([Ljava/lang/String;)V
-[16:38:40] [Client thread/WARN]: Use FMLCommonHandler.exitJava instead
-[16:38:40] [Client thread/WARN]: =============================================================
-[16:38:41] [Client thread/INFO]: [net.minecraftforge.fml.client.SplashProgress:start:246]: ---- Minecraft Crash Report ----
-// I let you down. Sorry :(
+[17:02:08] [main/INFO]: Extra: []
+[17:02:08] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/jessi/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[17:02:08] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[17:02:08] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[17:02:08] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[17:02:08] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[17:02:08] [main/INFO]: Forge Mod Loader version 11.15.1.2318 for Minecraft 1.8.9 loading
+[17:02:08] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_251, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_251\jre
+[17:02:08] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[17:02:08] [main/INFO]: Found a command line coremod : com.github.creeper123123321.viafabric.injection.MixinLoader
+[17:02:08] [main/WARN]: The coremod com.github.creeper123123321.viafabric.injection.MixinLoader does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[17:02:09] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.7.10 Source=file:/C:/Users/jessi/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.10-SNAPSHOT/db99723868016630419bf62afa24109bd6236073/mixin-0.7.10-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
+[17:02:09] [main/INFO]: Compatibility level set to JAVA_8
+[17:02:09] [main/ERROR]: Mixin config mixins.viaforge.json does not specify "minVersion" property
+[17:02:09] [main/DEBUG]: Enqueued coremod MixinLoader
+[17:02:09] [main/DEBUG]: Attempting to load commandline specified mods, relative to D:\Windows\Betirebssystem 2020.2\Desktop\ViaForge\run\.
+[17:02:09] [main/DEBUG]: Discovering coremods
+[17:02:09] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[17:02:09] [main/INFO]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[17:02:09] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[17:02:09] [main/INFO]: Injecting location in coremod com.github.creeper123123321.viafabric.injection.MixinLoader
+[17:02:09] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[17:02:09] [main/INFO]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[17:02:09] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[17:02:09] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[17:02:09] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[17:02:09] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[17:02:09] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[17:02:09] [main/DEBUG]: Injecting coremod FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin} class transformers
+[17:02:09] [main/TRACE]: Registering transformer net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
+[17:02:09] [main/TRACE]: Registering transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer
+[17:02:09] [main/TRACE]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriptionTransformer
+[17:02:09] [main/TRACE]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriberTransformer
+[17:02:09] [main/DEBUG]: Injection complete
+[17:02:09] [main/DEBUG]: Running coremod plugin for FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin}
+[17:02:09] [main/DEBUG]: Running coremod plugin FMLCorePlugin
+[17:02:09] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[17:02:10] [main/DEBUG]: Loading deobfuscation resource C:\Users\jessi\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_stable\22\srgs\srg-mcp.srg with 27884 records
+[17:02:11] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
+[17:02:11] [main/DEBUG]: Coremod plugin class FMLCorePlugin run successfully
+[17:02:11] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[17:02:11] [main/DEBUG]: Injecting coremod FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin} class transformers
+[17:02:11] [main/DEBUG]: Injection complete
+[17:02:11] [main/DEBUG]: Running coremod plugin for FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin}
+[17:02:11] [main/DEBUG]: Running coremod plugin FMLForgePlugin
+[17:02:11] [main/DEBUG]: Coremod plugin class FMLForgePlugin run successfully
+[17:02:11] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[17:02:11] [main/DEBUG]: Injecting coremod MixinLoader {com.github.creeper123123321.viafabric.injection.MixinLoader} class transformers
+[17:02:11] [main/DEBUG]: Injection complete
+[17:02:11] [main/DEBUG]: Running coremod plugin for MixinLoader {com.github.creeper123123321.viafabric.injection.MixinLoader}
+[17:02:11] [main/DEBUG]: Running coremod plugin MixinLoader
+[17:02:11] [main/DEBUG]: Coremod plugin class MixinLoader run successfully
+[17:02:11] [main/INFO]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[17:02:11] [main/INFO]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@3db663d0
+[17:02:12] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[17:02:12] [main/DEBUG]: Loaded 165 rules from AccessTransformer config file forge_at.cfg
+[17:02:12] [main/DEBUG]: Validating minecraft
+[17:02:12] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[17:02:12] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[17:02:12] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[17:02:12] [main/WARN]: Reference map 'mixins.viaforge.refmap.json' for mixins.viaforge.json could not be read. If this is a development environment you can ignore this message
+[17:02:13] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[17:02:14] [Client thread/INFO]: Setting user: Player952
+[17:02:20] [Client thread/INFO]: Loading translations...
+[17:02:20] [Client thread/INFO]: Registering protocols...
+[17:02:23] [Via-Mappingloader-0/INFO]: Loading 1.12 -> 1.13 mappings...
+[17:02:23] [Via-Mappingloader-1/INFO]: Loading 1.13 -> 1.13.2 mappings...
+[17:02:24] [Via-Mappingloader-0/INFO]: Loading block connection mappings ...
+[17:02:24] [Via-Mappingloader-2/INFO]: Loading 1.13.2 -> 1.14 mappings...
+[17:02:25] [Via-Mappingloader-3/INFO]: Loading 1.14 -> 1.15 mappings...
+[17:02:25] [Via-Mappingloader-4/INFO]: Loading 1.15 -> 1.16 mappings...
+[17:02:25] [Via-Mappingloader-4/INFO]: Loading 1.16 -> 1.16.2 mappings...
+[17:02:25] [Via-Mappingloader-0/INFO]: Loading 1.16.2 -> 1.17 mappings...
+[17:02:25] [Via-Mappingloader-0/INFO]: Loading 1.13 -> 1.12 mappings...
+[17:02:27] [Via-Mappingloader-0/INFO]: Loading 1.13.2 -> 1.13 mappings...
+[17:02:27] [Via-Mappingloader-0/INFO]: Loading 1.14 -> 1.13.2 mappings...
+[17:02:27] [Via-Mappingloader-0/INFO]: Loading 1.15 -> 1.14 mappings...
+[17:02:27] [Via-Mappingloader-0/INFO]: Loading 1.16 -> 1.15 mappings...
+[17:02:27] [Via-Mappingloader-0/INFO]: Loading 1.16.2 -> 1.16 mappings...
+[17:02:27] [Via-Mappingloader-0/INFO]: Loading 1.17 -> 1.16.2 mappings...
+[17:02:29] [ViaFabric-0/INFO]: ViaVersion detected server version: 1.8.x(47)
+[17:02:29] [ViaFabric-0/WARN]: This version of Minecraft is over half a decade old and support for it will be fully dropped eventually. Please upgrade to a newer version to avoid encountering bugs and stability issues that have long been fixed.
+[17:02:29] [ViaFabric-0/INFO]: Shutting down mapping loader executor!
+[17:02:29] [Client thread/INFO]: LWJGL Version: 2.9.4
+[17:02:30] [Client thread/WARN]: =============================================================
+[17:02:30] [Client thread/WARN]: MOD HAS DIRECT REFERENCE System.exit() THIS IS NOT ALLOWED REROUTING TO FML!
+[17:02:30] [Client thread/WARN]: Offendor: com/sun/jna/Native.main([Ljava/lang/String;)V
+[17:02:30] [Client thread/WARN]: Use FMLCommonHandler.exitJava instead
+[17:02:30] [Client thread/WARN]: =============================================================
+[17:02:30] [ViaFabric-0/WARN]: You are running a newer version than is released!
+[17:02:30] [Client thread/INFO]: [net.minecraftforge.fml.client.SplashProgress:start:246]: ---- Minecraft Crash Report ----
+// Shall we play a game?
 
-Time: 10.11.20 16:38
+Time: 10.11.20 17:02
 Description: Loading screen debug info
 
 This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
@@ -106,7 +106,7 @@ Details:
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_251, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 456120320 bytes (434 MB) / 708313088 bytes (675 MB) up to 1894252544 bytes (1806 MB)
+	Memory: 93626744 bytes (89 MB) / 652214272 bytes (622 MB) up to 1894252544 bytes (1806 MB)
 	JVM Flags: 0 total; 
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
@@ -114,5 +114,45 @@ Details:
 MixinLoader (unknown)
   
 	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.13559 Compatibility Profile Context 26.20.12028.2' Renderer: 'AMD Radeon(TM) RX460'
-[16:38:41] [Client thread/INFO]: MinecraftForge v11.15.1.2318 Initialized
-[16:38:41] [Client thread/INFO]: Replaced 229 ore recipies
+[17:02:31] [Client thread/INFO]: MinecraftForge v11.15.1.2318 Initialized
+[17:02:31] [Client thread/INFO]: Replaced 229 ore recipies
+[17:02:31] [Client thread/INFO]: Found 0 mods from the command line. Injecting into mod discoverer
+[17:02:31] [Client thread/INFO]: Searching D:\Windows\Betirebssystem 2020.2\Desktop\ViaForge\run\mods for mods
+[17:02:36] [Client thread/INFO]: Forge Mod Loader has identified 3 mods to load
+[17:02:36] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge] at CLIENT
+[17:02:36] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge] at SERVER
+[17:02:37] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge
+[17:02:37] [Client thread/INFO]: Processing ObjectHolder annotations
+[17:02:37] [Client thread/INFO]: Found 384 ObjectHolder annotations
+[17:02:37] [Client thread/INFO]: Identifying ItemStackHolder annotations
+[17:02:37] [Client thread/INFO]: Found 0 ItemStackHolder annotations
+[17:02:37] [Client thread/INFO]: Configured a dormant chunk cache size of 0
+[17:02:37] [Client thread/INFO]: Applying holder lookups
+[17:02:37] [Forge Version Check/INFO]: [Forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[17:02:37] [Client thread/INFO]: Holder lookups applied
+[17:02:37] [Client thread/INFO]: Injecting itemstacks
+[17:02:37] [Client thread/INFO]: Itemstack injection complete
+[17:02:37] [Forge Version Check/INFO]: [Forge] Found status: AHEAD Target: null
+[17:02:37] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[17:02:38] [Thread-10/INFO]: Initializing LWJGL OpenAL
+[17:02:38] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[17:02:38] [Thread-10/INFO]: OpenAL initialized.
+[17:02:38] [Sound Library Loader/INFO]: Sound engine started
+[17:02:49] [Client thread/INFO]: Max texture size: 16384
+[17:02:49] [Client thread/INFO]: Created: 16x16 textures-atlas
+[17:02:50] [Client thread/INFO]: Injecting itemstacks
+[17:02:50] [Client thread/INFO]: Itemstack injection complete
+[17:02:50] [Client thread/INFO]: Forge Mod Loader has successfully loaded 3 mods
+[17:02:50] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge
+[17:02:50] [Client thread/INFO]: SoundSystem shutting down...
+[17:02:51] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[17:02:51] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[17:02:51] [Thread-12/INFO]: Initializing LWJGL OpenAL
+[17:02:51] [Thread-12/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[17:02:51] [Thread-12/INFO]: OpenAL initialized.
+[17:02:51] [Sound Library Loader/INFO]: Sound engine started
+[17:02:59] [Client thread/INFO]: Max texture size: 16384
+[17:03:00] [Client thread/INFO]: Created: 512x512 textures-atlas
+[17:03:24] [Client thread/INFO]: Stopping!
+[17:03:24] [Client thread/INFO]: SoundSystem shutting down...
+[17:03:24] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

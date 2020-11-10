@@ -1,6 +1,7 @@
 Manifest-Version: 1.0
 TweakOrder: 0
 MixinConfigs: mixins.viaforge.json
-FMLCorePluginContainsFMLMod: true
+FMLCorePluginContainsFMLMod: com.github.creeper123123321.viafabric.inj
+ ection.MixinLoader
 tweakClass: org.spongepowered.asm.launch.MixinTweaker
 

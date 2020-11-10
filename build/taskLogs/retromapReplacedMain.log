@@ -33387,6 +33387,66 @@ RENAME MAP: param net/minecraft/world/storage/WorldInfo/WorldInfo (Lnet/minecraf
 RENAME MAP: param net/minecraft/world/storage/WorldInfo/WorldInfo (Lnet/minecraft/world/WorldSettings;Ljava/lang/String;)V 0 -> p_i2158_1_
 RENAME MAP: param net/minecraft/world/storage/WorldInfo/WorldInfo (Lnet/minecraft/world/WorldSettings;Ljava/lang/String;)V 1 -> p_i2158_2_
 RENAME MAP: param net/minecraft/world/storage/WorldInfo/WorldInfo (Lnet/minecraft/world/storage/WorldInfo;)V 0 -> p_i2159_1_
+Start Processing: com\github\creeper123123321\viafabric\ViaFabric.java
+[method, org/apache/logging/log4j/LogManager/getLogger, (Ljava/lang/String;)Lorg/apache/logging/log4j/Logger;]
+[method, com/github/creeper123123321/viafabric/ViaFabric/getVersion, ()Ljava/lang/String;]
+[method, com/github/creeper123123321/viafabric/ViaFabric/onInitialize, ()V]
+[method, com/github/creeper123123321/viafabric/ViaFabric/loadVia, ()V]
+[method, us/myles/ViaVersion/api/Via/init, (Lus/myles/ViaVersion/ViaManager;)V]
+[method, us/myles/ViaVersion/ViaManager/builder, ()Lus/myles/ViaVersion/ViaManager$ViaManagerBuilder;]
+[method, us/myles/ViaVersion/ViaManager/ViaManagerBuilder/injector, (Lus/myles/ViaVersion/api/platform/ViaInjector;)Lus/myles/ViaVersion/ViaManager$ViaManagerBuilder;]
+[method, us/myles/ViaVersion/ViaManager/ViaManagerBuilder/loader, (Lus/myles/ViaVersion/api/platform/ViaPlatformLoader;)Lus/myles/ViaVersion/ViaManager$ViaManagerBuilder;]
+[method, us/myles/ViaVersion/ViaManager/ViaManagerBuilder/platform, (Lus/myles/ViaVersion/api/platform/ViaPlatform;)Lus/myles/ViaVersion/ViaManager$ViaManagerBuilder;]
+[method, us/myles/ViaVersion/ViaManager/ViaManagerBuilder/build, ()Lus/myles/ViaVersion/ViaManager;]
+[method, us/myles/ViaVersion/api/data/MappingDataLoader/enableMappingsCache, ()V]
+[method, us/myles/ViaVersion/api/Via/getManager, ()Lus/myles/ViaVersion/ViaManager;]
+[method, us/myles/ViaVersion/ViaManager/init, ()V]
+[method, java/util/concurrent/CompletableFuture/complete, (Ljava/lang/Object;)Z]
+[method, com/github/creeper123123321/viafabric/ViaFabric/loadVia, ()V]
+[method, java/lang/ClassLoader/getSystemClassLoader, ()Ljava/lang/ClassLoader;]
+[method, java/lang/Object/getClass, ()Ljava/lang/Class;]
+[method, java/lang/Class/getDeclaredField, (Ljava/lang/String;)Ljava/lang/reflect/Field;]
+[method, java/lang/reflect/AccessibleObject/setAccessible, (Z)V]
+[method, java/lang/reflect/Field/get, (Ljava/lang/Object;)Ljava/lang/Object;]
+Rename class net/minecraft/client/Minecraft[4163,4172]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[4173,4185]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/mcDataDir[4188,4197]::mcDataDir->field_71412_D
+[method, java/io/File/listFiles, ()[Ljava/io/File;]
+[method, java/io/File/isFile, ()Z]
+[method, java/io/File/getName, ()Ljava/lang/String;]
+[method, java/lang/String/startsWith, (Ljava/lang/String;)Z]
+[method, java/io/File/getName, ()Ljava/lang/String;]
+[method, java/lang/String/toLowerCase, ()Ljava/lang/String;]
+[method, java/lang/String/endsWith, (Ljava/lang/String;)Z]
+[method, sun/misc/URLClassPath/addURL, (Ljava/net/URL;)V]
+[method, java/io/File/toURI, ()Ljava/net/URI;]
+[method, java/net/URI/toURL, ()Ljava/net/URL;]
+Import: net.minecraft.client.Minecraft
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\ViaFabric.java
+
+Start Processing: com\github\creeper123123321\viafabric\handler\CommonTransformer.java
+End  Processing: com\github\creeper123123321\viafabric\handler\CommonTransformer.java
+
+Start Processing: com\github\creeper123123321\viafabric\handler\clientside\VRDecodeHandler.java
+[method, com/github/creeper123123321/viafabric/handler/clientside/VRDecodeHandler/VRDecodeHandler, (Lus/myles/ViaVersion/api/data/UserConnection;)V]
+FOUND CONSTR method com/github/creeper123123321/viafabric/handler/clientside/VRDecodeHandler/VRDecodeHandler (Lus/myles/ViaVersion/api/data/UserConnection;)V com/github/creeper123123321/viafabric/handler/clientside/VRDecodeHandler
+[method, io/netty/handler/codec/MessageToMessageDecoder/decode, (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Ljava/util/List;)V]
+[method, io/netty/channel/ChannelHandler/exceptionCaught, (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Throwable;)V]
+[method, io/netty/channel/ChannelHandler/exceptionCaught, (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Throwable;)V]
+[method, com/github/creeper123123321/viafabric/handler/clientside/VRDecodeHandler/getInfo, ()Lus/myles/ViaVersion/api/data/UserConnection;]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\handler\clientside\VRDecodeHandler.java
+
+Start Processing: com\github\creeper123123321\viafabric\handler\clientside\VREncodeHandler.java
+[method, com/github/creeper123123321/viafabric/handler/clientside/VREncodeHandler/VREncodeHandler, (Lus/myles/ViaVersion/api/data/UserConnection;)V]
+FOUND CONSTR method com/github/creeper123123321/viafabric/handler/clientside/VREncodeHandler/VREncodeHandler (Lus/myles/ViaVersion/api/data/UserConnection;)V com/github/creeper123123321/viafabric/handler/clientside/VREncodeHandler
+[method, io/netty/handler/codec/MessageToMessageEncoder/encode, (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Ljava/util/List;)V]
+[method, io/netty/channel/ChannelHandler/exceptionCaught, (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Throwable;)V]
+[method, io/netty/channel/ChannelHandler/exceptionCaught, (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Throwable;)V]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\handler\clientside\VREncodeHandler.java
+
 Start Processing: com\github\creeper123123321\viafabric\injection\MixinLoader.java
 Warning: com\github\creeper123123321\viafabric\injection\MixinLoader.java has CRLF line endings; consider switching to LF
 [method, com/github/creeper123123321/viafabric/injection/MixinLoader/MixinLoader, ()V]
@@ -33407,4 +33467,506 @@ No rename for method net/minecraftforge/fml/relauncher/IFMLLoadingPlugin/injectD
 No rename for method net/minecraftforge/fml/relauncher/IFMLLoadingPlugin/getAccessTransformerClass ()Ljava/lang/String;
 Adding 0 imports
 End  Processing: com\github\creeper123123321\viafabric\injection\MixinLoader.java
+
+Start Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiDisconnected.java
+Warning: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiDisconnected.java has CRLF line endings; consider switching to LF
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiDisconnected/injectInitGui, (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[791,801]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename class net/minecraft/client/gui/GuiButton[814,823]::GuiButton->GuiButton
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/getProtocolName, (I)Ljava/lang/String;]
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiDisconnected/injectActionPerformed, (Lnet/minecraft/client/gui/GuiButton;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename class net/minecraft/client/gui/GuiButton[1027,1036]::GuiButton->GuiButton
+Rename field net/minecraft/client/gui/GuiButton/id[1111,1113]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[1147,1149]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1162,1178]::displayGuiScreen->func_147108_a
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiDisconnected/injectDrawScreen, (IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename field net/minecraft/client/gui/GuiScreen/mc[1395,1397]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/fontRendererObj[1410,1425]::fontRendererObj->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/drawStringWithShadow (Ljava/lang/String;FFI)I[1424,1444]::drawStringWithShadow->func_175063_a
+Import: net.minecraft.client.gui.GuiButton
+Import: net.minecraft.client.gui.GuiDisconnected
+Import: net.minecraft.client.gui.GuiScreen
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiDisconnected.java
+
+Start Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiMainMenu.java
+Warning: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiMainMenu.java has CRLF line endings; consider switching to LF
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiMainMenu/injectInitGui, (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[779,789]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename class net/minecraft/client/gui/GuiButton[802,811]::GuiButton->GuiButton
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/getProtocolName, (I)Ljava/lang/String;]
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiMainMenu/injectActionPerformed, (Lnet/minecraft/client/gui/GuiButton;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename class net/minecraft/client/gui/GuiButton[1015,1024]::GuiButton->GuiButton
+Rename field net/minecraft/client/gui/GuiButton/id[1099,1101]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[1135,1137]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1150,1166]::displayGuiScreen->func_147108_a
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiMainMenu/injectDrawScreen, (IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename field net/minecraft/client/gui/GuiScreen/mc[1383,1385]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/fontRendererObj[1398,1413]::fontRendererObj->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/drawStringWithShadow (Ljava/lang/String;FFI)I[1412,1432]::drawStringWithShadow->func_175063_a
+Import: net.minecraft.client.gui.GuiButton
+Import: net.minecraft.client.gui.GuiMainMenu
+Import: net.minecraft.client.gui.GuiScreen
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiMainMenu.java
+
+Start Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiMultiplayer.java
+Warning: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiMultiplayer.java has CRLF line endings; consider switching to LF
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiMultiplayer/injectInitGui, (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[788,798]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename class net/minecraft/client/gui/GuiButton[811,820]::GuiButton->GuiButton
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/getProtocolName, (I)Ljava/lang/String;]
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiMultiplayer/injectActionPerformed, (Lnet/minecraft/client/gui/GuiButton;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename class net/minecraft/client/gui/GuiButton[1025,1034]::GuiButton->GuiButton
+Rename field net/minecraft/client/gui/GuiButton/id[1109,1111]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[1145,1147]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1160,1176]::displayGuiScreen->func_147108_a
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiMultiplayer/injectDrawScreen, (IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename field net/minecraft/client/gui/GuiScreen/mc[1393,1395]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/fontRendererObj[1408,1423]::fontRendererObj->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/drawStringWithShadow (Ljava/lang/String;FFI)I[1422,1442]::drawStringWithShadow->func_175063_a
+Import: net.minecraft.client.gui.GuiButton
+Import: net.minecraft.client.gui.GuiMultiplayer
+Import: net.minecraft.client.gui.GuiScreen
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiMultiplayer.java
+
+Start Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiScreenAddServer.java
+Warning: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiScreenAddServer.java has CRLF line endings; consider switching to LF
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiScreenAddServer/injectInitGui, (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[800,810]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename class net/minecraft/client/gui/GuiButton[823,832]::GuiButton->GuiButton
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/getProtocolName, (I)Ljava/lang/String;]
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiScreenAddServer/injectActionPerformed, (Lnet/minecraft/client/gui/GuiButton;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename class net/minecraft/client/gui/GuiButton[1036,1045]::GuiButton->GuiButton
+Rename field net/minecraft/client/gui/GuiButton/id[1120,1122]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[1156,1158]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1171,1187]::displayGuiScreen->func_147108_a
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiScreenAddServer/injectDrawScreen, (IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename field net/minecraft/client/gui/GuiScreen/mc[1404,1406]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/fontRendererObj[1419,1434]::fontRendererObj->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/drawStringWithShadow (Ljava/lang/String;FFI)I[1433,1453]::drawStringWithShadow->func_175063_a
+Import: net.minecraft.client.gui.GuiButton
+Import: net.minecraft.client.gui.GuiScreen
+Import: net.minecraft.client.gui.GuiScreenAddServer
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiScreenAddServer.java
+
+Start Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiScreenServerList.java
+Warning: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiScreenServerList.java has CRLF line endings; consider switching to LF
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiScreenServerList/injectInitGui, (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[803,813]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename class net/minecraft/client/gui/GuiButton[826,835]::GuiButton->GuiButton
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/getProtocolName, (I)Ljava/lang/String;]
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiScreenServerList/injectActionPerformed, (Lnet/minecraft/client/gui/GuiButton;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename class net/minecraft/client/gui/GuiButton[1039,1048]::GuiButton->GuiButton
+Rename field net/minecraft/client/gui/GuiButton/id[1123,1125]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[1159,1161]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1174,1190]::displayGuiScreen->func_147108_a
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinGuiScreenServerList/injectDrawScreen, (IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename field net/minecraft/client/gui/GuiScreen/mc[1407,1409]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/fontRendererObj[1422,1437]::fontRendererObj->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/drawStringWithShadow (Ljava/lang/String;FFI)I[1436,1456]::drawStringWithShadow->func_175063_a
+Import: net.minecraft.client.gui.GuiButton
+Import: net.minecraft.client.gui.GuiScreen
+Import: net.minecraft.client.gui.GuiScreenServerList
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinGuiScreenServerList.java
+
+Start Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinMinecraft.java
+Warning: com\github\creeper123123321\viafabric\injection\mixins\MixinMinecraft.java has CRLF line endings; consider switching to LF
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinMinecraft/injectConstructor, (Lnet/minecraft/client/main/GameConfiguration;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+Rename class net/minecraft/client/main/GameConfiguration[574,591]::GameConfiguration->GameConfiguration
+[method, com/github/creeper123123321/viafabric/ViaFabric/onInitialize, ()V]
+[method, java/lang/Throwable/printStackTrace, ()V]
+Import: net.minecraft.client.Minecraft
+Import: net.minecraft.client.main.GameConfiguration
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinMinecraft.java
+
+Start Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinNetworkManager.java
+Warning: com\github\creeper123123321\viafabric\injection\mixins\MixinNetworkManager.java has CRLF line endings; consider switching to LF
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinNetworkManager/decodeEncodePlacement, (Lio/netty/channel/ChannelPipeline;Ljava/lang/String;Ljava/lang/String;Lio/netty/channel/ChannelHandler;)Lio/netty/channel/ChannelPipeline;]
+[method, io/netty/channel/ChannelPipeline/get, (Ljava/lang/String;)Lio/netty/channel/ChannelHandler;]
+[method, io/netty/channel/ChannelPipeline/get, (Ljava/lang/String;)Lio/netty/channel/ChannelHandler;]
+[method, io/netty/channel/ChannelPipeline/addBefore, (Ljava/lang/String;Ljava/lang/String;Lio/netty/channel/ChannelHandler;)Lio/netty/channel/ChannelPipeline;]
+Import: net.minecraft.network.NetworkManager
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinNetworkManager.java
+
+Start Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinNetworkManagerChInit.java
+Warning: com\github\creeper123123321\viafabric\injection\mixins\MixinNetworkManagerChInit.java has CRLF line endings; consider switching to LF
+[method, com/github/creeper123123321/viafabric/injection/mixins/MixinNetworkManagerChInit/onInitChannel, (Lio/netty/channel/Channel;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+[method, us/myles/ViaVersion/api/protocol/ProtocolPipeline/add, (Lus/myles/ViaVersion/api/protocol/Protocol;)V]
+[method, io/netty/channel/Channel/pipeline, ()Lio/netty/channel/ChannelPipeline;]
+[method, io/netty/channel/ChannelPipeline/addBefore, (Ljava/lang/String;Ljava/lang/String;Lio/netty/channel/ChannelHandler;)Lio/netty/channel/ChannelPipeline;]
+[method, io/netty/channel/ChannelPipeline/addBefore, (Ljava/lang/String;Ljava/lang/String;Lio/netty/channel/ChannelHandler;)Lio/netty/channel/ChannelPipeline;]
+[method, java/io/PrintStream/println, (Ljava/lang/String;)V]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\injection\mixins\MixinNetworkManagerChInit.java
+
+Start Processing: com\github\creeper123123321\viafabric\platform\VRBossBar.java
+[method, com/github/creeper123123321/viafabric/platform/VRBossBar/VRBossBar, (Ljava/lang/String;FLus/myles/ViaVersion/api/boss/BossColor;Lus/myles/ViaVersion/api/boss/BossStyle;)V]
+FOUND CONSTR method com/github/creeper123123321/viafabric/platform/VRBossBar/VRBossBar (Ljava/lang/String;FLus/myles/ViaVersion/api/boss/BossColor;Lus/myles/ViaVersion/api/boss/BossStyle;)V com/github/creeper123123321/viafabric/platform/VRBossBar
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\platform\VRBossBar.java
+
+Start Processing: com\github\creeper123123321\viafabric\platform\VRClientSideUserConnection.java
+[method, com/github/creeper123123321/viafabric/platform/VRClientSideUserConnection/VRClientSideUserConnection, (Lio/netty/channel/Channel;)V]
+FOUND CONSTR method com/github/creeper123123321/viafabric/platform/VRClientSideUserConnection/VRClientSideUserConnection (Lio/netty/channel/Channel;)V com/github/creeper123123321/viafabric/platform/VRClientSideUserConnection
+[method, us/myles/ViaVersion/api/data/UserConnection/sendRawPacket, (Lio/netty/buffer/ByteBuf;Z)V]
+[method, us/myles/ViaVersion/api/data/UserConnection/sendRawPacketFuture, (Lio/netty/buffer/ByteBuf;)Lio/netty/channel/ChannelFuture;]
+[method, us/myles/ViaVersion/api/data/UserConnection/getChannel, ()Lio/netty/channel/Channel;]
+[method, io/netty/channel/Channel/pipeline, ()Lio/netty/channel/ChannelPipeline;]
+[method, io/netty/channel/ChannelPipeline/context, (Ljava/lang/String;)Lio/netty/channel/ChannelHandlerContext;]
+[method, io/netty/channel/ChannelHandlerContext/fireChannelRead, (Ljava/lang/Object;)Lio/netty/channel/ChannelHandlerContext;]
+[method, us/myles/ViaVersion/api/data/UserConnection/getChannel, ()Lio/netty/channel/Channel;]
+[method, io/netty/channel/Channel/newSucceededFuture, ()Lio/netty/channel/ChannelFuture;]
+[method, us/myles/ViaVersion/api/data/UserConnection/sendRawPacketToServer, (Lio/netty/buffer/ByteBuf;Z)V]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\platform\VRClientSideUserConnection.java
+
+Start Processing: com\github\creeper123123321\viafabric\platform\VRConnectionManager.java
+[method, us/myles/ViaVersion/api/platform/ViaConnectionManager/isFrontEnd, (Lus/myles/ViaVersion/api/data/UserConnection;)Z]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\platform\VRConnectionManager.java
+
+Start Processing: com\github\creeper123123321\viafabric\platform\VRInjector.java
+[method, us/myles/ViaVersion/api/platform/ViaInjector/inject, ()V]
+[method, us/myles/ViaVersion/api/platform/ViaInjector/uninject, ()V]
+[method, us/myles/ViaVersion/api/platform/ViaInjector/getServerProtocolVersion, ()I]
+[method, com/github/creeper123123321/viafabric/platform/VRInjector/getClientProtocol, ()I]
+[method, com/github/creeper123123321/viafabric/platform/VRInjector/getClientProtocol, ()I]
+[method, us/myles/ViaVersion/api/platform/ViaInjector/getEncoderName, ()Ljava/lang/String;]
+[method, us/myles/ViaVersion/api/platform/ViaInjector/getDecoderName, ()Ljava/lang/String;]
+[method, us/myles/ViaVersion/api/platform/ViaInjector/getDump, ()Lus/myles/viaversion/libs/gson/JsonObject;]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\platform\VRInjector.java
+
+Start Processing: com\github\creeper123123321\viafabric\platform\VRLoader.java
+[method, us/myles/ViaVersion/api/platform/ViaPlatformLoader/load, ()V]
+[method, us/myles/ViaVersion/api/Via/getManager, ()Lus/myles/ViaVersion/ViaManager;]
+[method, us/myles/ViaVersion/ViaManager/getProviders, ()Lus/myles/ViaVersion/api/platform/providers/ViaProviders;]
+[method, us/myles/ViaVersion/api/platform/providers/ViaProviders/use, (Ljava/lang/Class;Lus/myles/ViaVersion/api/platform/providers/Provider;)V]
+[method, us/myles/ViaVersion/api/Via/getManager, ()Lus/myles/ViaVersion/ViaManager;]
+[method, us/myles/ViaVersion/ViaManager/getProviders, ()Lus/myles/ViaVersion/api/platform/providers/ViaProviders;]
+[method, us/myles/ViaVersion/api/platform/providers/ViaProviders/use, (Ljava/lang/Class;Lus/myles/ViaVersion/api/platform/providers/Provider;)V]
+[method, us/myles/ViaVersion/api/platform/ViaPlatformLoader/unload, ()V]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\platform\VRLoader.java
+
+Start Processing: com\github\creeper123123321\viafabric\platform\VRPlatform.java
+[method, org/apache/logging/log4j/LogManager/getLogger, (Ljava/lang/String;)Lorg/apache/logging/log4j/Logger;]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/VRPlatform, ()V]
+FOUND CONSTR method com/github/creeper123123321/viafabric/platform/VRPlatform/VRPlatform ()V com/github/creeper123123321/viafabric/platform/VRPlatform
+Rename class net/minecraft/client/Minecraft[2958,2967]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[2968,2980]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/mcDataDir[2983,2992]::mcDataDir->field_71412_D
+[method, java/io/File/toPath, ()Ljava/nio/file/Path;]
+[method, java/nio/file/Path/resolve, (Ljava/lang/String;)Ljava/nio/file/Path;]
+[method, java/nio/file/Path/resolve, (Ljava/lang/String;)Ljava/nio/file/Path;]
+[method, java/nio/file/Path/toFile, ()Ljava/io/File;]
+[method, java/nio/file/Path/toFile, ()Ljava/io/File;]
+Rename class net/minecraft/server/MinecraftServer[3259,3274]::MinecraftServer->MinecraftServer
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/getServer, ()Lnet/minecraft/server/MinecraftServer;]
+Rename class net/minecraft/client/Minecraft[3381,3390]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[3391,3403]::getMinecraft->func_71410_x
+Rename method net/minecraft/client/Minecraft/isIntegratedServerRunning ()Z[3406,3431]::isIntegratedServerRunning->func_71387_A
+Rename class net/minecraft/server/MinecraftServer[3450,3465]::MinecraftServer->MinecraftServer
+Rename method net/minecraft/server/MinecraftServer/getServer ()Lnet/minecraft/server/MinecraftServer;[3466,3475]::getServer->func_71276_C
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getLogger, ()Ljava/util/logging/Logger;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getPlatformName, ()Ljava/lang/String;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getPlatformVersion, ()Ljava/lang/String;]
+[method, com/github/creeper123123321/viafabric/ViaFabric/getVersion, ()Ljava/lang/String;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getPluginVersion, ()Ljava/lang/String;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/runAsync, (Ljava/lang/Runnable;)Lus/myles/ViaVersion/api/platform/TaskId;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/runSync, (Ljava/lang/Runnable;)Lus/myles/ViaVersion/api/platform/TaskId;]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/getServer, ()Lnet/minecraft/server/MinecraftServer;]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/runServerSync, (Ljava/lang/Runnable;)Lus/myles/ViaVersion/api/platform/TaskId;]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/runEventLoop, (Ljava/lang/Runnable;)Lus/myles/ViaVersion/api/platform/TaskId;]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/runServerSync, (Ljava/lang/Runnable;)Lus/myles/ViaVersion/api/platform/TaskId;]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/runEventLoop, (Ljava/lang/Runnable;)Lus/myles/ViaVersion/api/platform/TaskId;]
+[method, java/util/concurrent/ExecutorService/submit, (Ljava/lang/Runnable;)Ljava/util/concurrent/Future;]
+[method, io/netty/util/concurrent/Future/addListener, (Lio/netty/util/concurrent/GenericFutureListener;)Lio/netty/util/concurrent/Future;]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/errorLogger, ()Lio/netty/util/concurrent/GenericFutureListener;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/runSync, (Ljava/lang/Runnable;Ljava/lang/Long;)Lus/myles/ViaVersion/api/platform/TaskId;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/runRepeatingSync, (Ljava/lang/Runnable;Ljava/lang/Long;)Lus/myles/ViaVersion/api/platform/TaskId;]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/errorLogger, ()Lio/netty/util/concurrent/GenericFutureListener;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/cancelTask, (Lus/myles/ViaVersion/api/platform/TaskId;)V]
+[method, us/myles/ViaVersion/api/platform/TaskId/getObject, ()Ljava/lang/Object;]
+[method, java/util/concurrent/Future/cancel, (Z)Z]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getOnlinePlayers, ()[Lus/myles/ViaVersion/api/command/ViaCommandSender;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/sendMessage, (Ljava/util/UUID;Ljava/lang/String;)V]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/kickPlayer, (Ljava/util/UUID;Ljava/lang/String;)Z]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/kickServer, (Ljava/util/UUID;Ljava/lang/String;)Z]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/kickServer, (Ljava/util/UUID;Ljava/lang/String;)Z]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/isPluginEnabled, ()Z]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getApi, ()Lus/myles/ViaVersion/api/ViaAPI;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getConf, ()Lus/myles/ViaVersion/api/ViaVersionConfig;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getConfigurationProvider, ()Lus/myles/ViaVersion/api/configuration/ConfigurationProvider;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getDataFolder, ()Ljava/io/File;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/onReload, ()V]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getDump, ()Lus/myles/viaversion/libs/gson/JsonObject;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/isOldClientsAllowed, ()Z]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getConnectionManager, ()Lus/myles/ViaVersion/api/platform/ViaConnectionManager;]
+[method, com/github/creeper123123321/viafabric/platform/VRPlatform/legacyToJson, (Ljava/lang/String;)Ljava/lang/String;]
+[method, us/myles/viaversion/libs/bungeecordchat/chat/ComponentSerializer/toString, ([Lus/myles/viaversion/libs/bungeecordchat/api/chat/BaseComponent;)Ljava/lang/String;]
+[method, us/myles/viaversion/libs/bungeecordchat/api/chat/TextComponent/fromLegacyText, (Ljava/lang/String;)[Lus/myles/viaversion/libs/bungeecordchat/api/chat/BaseComponent;]
+Import: net.minecraft.client.Minecraft
+Import: net.minecraft.server.MinecraftServer
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\platform\VRPlatform.java
+
+Start Processing: com\github\creeper123123321\viafabric\platform\VRViaAPI.java
+[method, us/myles/ViaVersion/api/ViaAPI/getPlayerVersion, (Ljava/lang/Object;)I]
+[method, us/myles/ViaVersion/api/Via/getManager, ()Lus/myles/ViaVersion/ViaManager;]
+[method, us/myles/ViaVersion/ViaManager/getConnection, (Ljava/util/UUID;)Lus/myles/ViaVersion/api/data/UserConnection;]
+[method, us/myles/ViaVersion/api/data/UserConnection/getProtocolInfo, ()Lus/myles/ViaVersion/protocols/base/ProtocolInfo;]
+[method, us/myles/ViaVersion/protocols/base/ProtocolInfo/getProtocolVersion, ()I]
+[method, us/myles/ViaVersion/api/Via/getManager, ()Lus/myles/ViaVersion/ViaManager;]
+[method, us/myles/ViaVersion/ViaManager/getInjector, ()Lus/myles/ViaVersion/api/platform/ViaInjector;]
+[method, us/myles/ViaVersion/api/platform/ViaInjector/getServerProtocolVersion, ()I]
+[method, us/myles/ViaVersion/api/ViaAPI/isInjected, (Ljava/util/UUID;)Z]
+[method, us/myles/ViaVersion/api/Via/getManager, ()Lus/myles/ViaVersion/ViaManager;]
+[method, us/myles/ViaVersion/ViaManager/isClientConnected, (Ljava/util/UUID;)Z]
+[method, us/myles/ViaVersion/api/ViaAPI/getVersion, ()Ljava/lang/String;]
+[method, us/myles/ViaVersion/api/Via/getPlatform, ()Lus/myles/ViaVersion/api/platform/ViaPlatform;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getPluginVersion, ()Ljava/lang/String;]
+[method, us/myles/ViaVersion/api/ViaAPI/sendRawPacket, (Ljava/lang/Object;Lio/netty/buffer/ByteBuf;)V]
+[method, us/myles/ViaVersion/api/Via/getManager, ()Lus/myles/ViaVersion/ViaManager;]
+[method, us/myles/ViaVersion/ViaManager/getConnection, (Ljava/util/UUID;)Lus/myles/ViaVersion/api/data/UserConnection;]
+[method, us/myles/ViaVersion/api/data/UserConnection/sendRawPacket, (Lio/netty/buffer/ByteBuf;)V]
+[method, us/myles/ViaVersion/api/ViaAPI/createBossBar, (Ljava/lang/String;Lus/myles/ViaVersion/api/boss/BossColor;Lus/myles/ViaVersion/api/boss/BossStyle;)Lus/myles/ViaVersion/api/boss/BossBar;]
+[method, us/myles/ViaVersion/api/ViaAPI/createBossBar, (Ljava/lang/String;FLus/myles/ViaVersion/api/boss/BossColor;Lus/myles/ViaVersion/api/boss/BossStyle;)Lus/myles/ViaVersion/api/boss/BossBar;]
+[method, us/myles/ViaVersion/api/ViaAPI/getSupportedVersions, ()Ljava/util/SortedSet;]
+[method, us/myles/ViaVersion/api/protocol/ProtocolRegistry/getSupportedVersions, ()Ljava/util/SortedSet;]
+[method, java/util/Collection/removeAll, (Ljava/util/Collection;)Z]
+[method, us/myles/ViaVersion/api/Via/getPlatform, ()Lus/myles/ViaVersion/api/platform/ViaPlatform;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getConf, ()Lus/myles/ViaVersion/api/ViaVersionConfig;]
+[method, us/myles/ViaVersion/api/ViaVersionConfig/getBlockedProtocols, ()Lus/myles/viaversion/libs/fastutil/ints/IntSet;]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\platform\VRViaAPI.java
+
+Start Processing: com\github\creeper123123321\viafabric\platform\VRViaConfig.java
+[method, java/util/Arrays/asList, ([Ljava/lang/Object;)Ljava/util/List;]
+[method, com/github/creeper123123321/viafabric/platform/VRViaConfig/VRViaConfig, (Ljava/io/File;)V]
+FOUND CONSTR method com/github/creeper123123321/viafabric/platform/VRViaConfig/VRViaConfig (Ljava/io/File;)V com/github/creeper123123321/viafabric/platform/VRViaConfig
+[method, us/myles/ViaVersion/api/configuration/ConfigurationProvider/reloadConfig, ()V]
+[method, us/myles/ViaVersion/util/Config/getDefaultConfigURL, ()Ljava/net/URL;]
+[method, java/lang/Object/getClass, ()Ljava/lang/Class;]
+[method, java/lang/Class/getClassLoader, ()Ljava/lang/ClassLoader;]
+[method, java/lang/ClassLoader/getResource, (Ljava/lang/String;)Ljava/net/URL;]
+[method, us/myles/ViaVersion/util/Config/handleConfig, (Ljava/util/Map;)V]
+[method, us/myles/ViaVersion/util/Config/getUnsupportedOptions, ()Ljava/util/List;]
+[method, us/myles/ViaVersion/api/ViaVersionConfig/isAntiXRay, ()Z]
+[method, us/myles/ViaVersion/api/ViaVersionConfig/isItemCache, ()Z]
+[method, us/myles/ViaVersion/api/ViaVersionConfig/isNMSPlayerTicking, ()Z]
+[method, us/myles/ViaVersion/api/ViaVersionConfig/is1_12QuickMoveActionFix, ()Z]
+[method, us/myles/ViaVersion/api/ViaVersionConfig/getBlockConnectionMethod, ()Ljava/lang/String;]
+[method, us/myles/ViaVersion/api/ViaVersionConfig/is1_9HitboxFix, ()Z]
+[method, us/myles/ViaVersion/api/ViaVersionConfig/is1_14HitboxFix, ()Z]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\platform\VRViaConfig.java
+
+Start Processing: com\github\creeper123123321\viafabric\protocol\ViaFabricHostnameProtocol.java
+Warning: com\github\creeper123123321\viafabric\protocol\ViaFabricHostnameProtocol.java has CRLF line endings; consider switching to LF
+[method, us/myles/ViaVersion/api/protocol/Protocol/registerPackets, ()V]
+[method, us/myles/ViaVersion/api/protocol/Protocol/registerIncoming, (Lus/myles/ViaVersion/packets/State;IILus/myles/ViaVersion/api/remapper/PacketRemapper;)V]
+[method, us/myles/ViaVersion/api/remapper/PacketRemapper/registerMap, ()V]
+[method, us/myles/ViaVersion/api/remapper/PacketRemapper/map, (Lus/myles/ViaVersion/api/type/Type;)V]
+[method, us/myles/ViaVersion/api/remapper/PacketRemapper/map, (Lus/myles/ViaVersion/api/type/Type;Lus/myles/ViaVersion/api/remapper/ValueTransformer;)V]
+[method, us/myles/ViaVersion/api/remapper/ValueTransformer/transform, (Lus/myles/ViaVersion/api/PacketWrapper;Ljava/lang/Object;)Ljava/lang/Object;]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\protocol\ViaFabricHostnameProtocol.java
+
+Start Processing: com\github\creeper123123321\viafabric\providers\VRVersionProvider.java
+[method, us/myles/ViaVersion/protocols/base/VersionProvider/getServerProtocol, (Lus/myles/ViaVersion/api/data/UserConnection;)I]
+[method, us/myles/ViaVersion/protocols/base/VersionProvider/getServerProtocol, (Lus/myles/ViaVersion/api/data/UserConnection;)I]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\providers\VRVersionProvider.java
+
+Start Processing: com\github\creeper123123321\viafabric\util\FutureTaskId.java
+[method, com/github/creeper123123321/viafabric/util/FutureTaskId/FutureTaskId, (Ljava/util/concurrent/Future;)V]
+FOUND CONSTR method com/github/creeper123123321/viafabric/util/FutureTaskId/FutureTaskId (Ljava/util/concurrent/Future;)V com/github/creeper123123321/viafabric/util/FutureTaskId
+[method, us/myles/ViaVersion/api/platform/TaskId/getObject, ()Ljava/lang/Object;]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\util\FutureTaskId.java
+
+Start Processing: com\github\creeper123123321\viafabric\util\JLoggerToLog4j.java
+[method, com/github/creeper123123321/viafabric/util/JLoggerToLog4j/JLoggerToLog4j, (Lorg/apache/logging/log4j/Logger;)V]
+FOUND CONSTR method com/github/creeper123123321/viafabric/util/JLoggerToLog4j/JLoggerToLog4j (Lorg/apache/logging/log4j/Logger;)V com/github/creeper123123321/viafabric/util/JLoggerToLog4j
+[method, java/util/logging/Logger/log, (Ljava/util/logging/LogRecord;)V]
+[method, java/util/logging/Logger/log, (Ljava/util/logging/Level;Ljava/lang/String;)V]
+[method, java/util/logging/LogRecord/getLevel, ()Ljava/util/logging/Level;]
+[method, java/util/logging/LogRecord/getMessage, ()Ljava/lang/String;]
+[method, java/util/logging/Logger/log, (Ljava/util/logging/Level;Ljava/lang/String;)V]
+[method, org/apache/logging/log4j/Logger/debug, (Ljava/lang/String;)V]
+[method, org/apache/logging/log4j/Logger/warn, (Ljava/lang/String;)V]
+[method, org/apache/logging/log4j/Logger/error, (Ljava/lang/String;)V]
+[method, org/apache/logging/log4j/Logger/info, (Ljava/lang/String;)V]
+[method, org/apache/logging/log4j/Logger/trace, (Ljava/lang/String;)V]
+[method, java/util/logging/Logger/log, (Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V]
+[method, org/apache/logging/log4j/Logger/debug, (Ljava/lang/String;[Ljava/lang/Object;)V]
+[method, org/apache/logging/log4j/Logger/warn, (Ljava/lang/String;[Ljava/lang/Object;)V]
+[method, org/apache/logging/log4j/Logger/error, (Ljava/lang/String;[Ljava/lang/Object;)V]
+[method, org/apache/logging/log4j/Logger/info, (Ljava/lang/String;[Ljava/lang/Object;)V]
+[method, org/apache/logging/log4j/Logger/trace, (Ljava/lang/String;[Ljava/lang/Object;)V]
+[method, java/util/logging/Logger/log, (Ljava/util/logging/Level;Ljava/lang/String;[Ljava/lang/Object;)V]
+[method, java/util/logging/Logger/log, (Ljava/util/logging/Level;Ljava/lang/String;)V]
+[method, java/text/MessageFormat/format, (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+[method, java/util/logging/Logger/log, (Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V]
+[method, org/apache/logging/log4j/Logger/debug, (Ljava/lang/String;Ljava/lang/Throwable;)V]
+[method, org/apache/logging/log4j/Logger/warn, (Ljava/lang/String;Ljava/lang/Throwable;)V]
+[method, org/apache/logging/log4j/Logger/error, (Ljava/lang/String;Ljava/lang/Throwable;)V]
+[method, org/apache/logging/log4j/Logger/info, (Ljava/lang/String;Ljava/lang/Throwable;)V]
+[method, org/apache/logging/log4j/Logger/trace, (Ljava/lang/String;Ljava/lang/Throwable;)V]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\util\JLoggerToLog4j.java
+
+Start Processing: com\github\creeper123123321\viafabric\util\ProtocolUtils.java
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/isSupported, (II)Z]
+[method, us/myles/ViaVersion/api/protocol/ProtocolRegistry/getProtocolPath, (II)Ljava/util/List;]
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/getProtocolName, (I)Ljava/lang/String;]
+[method, us/myles/ViaVersion/api/protocol/ProtocolVersion/isRegistered, (I)Z]
+[method, java/lang/Integer/toString, (I)Ljava/lang/String;]
+[method, us/myles/ViaVersion/api/protocol/ProtocolVersion/getProtocol, (I)Lus/myles/ViaVersion/api/protocol/ProtocolVersion;]
+[method, us/myles/ViaVersion/api/protocol/ProtocolVersion/getName, ()Ljava/lang/String;]
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/isStartOfProtocolText, (Ljava/lang/String;)Z]
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/parseProtocolId, (Ljava/lang/String;)Ljava/lang/Integer;]
+[method, java/lang/Integer/parseInt, (Ljava/lang/String;)I]
+[method, us/myles/ViaVersion/api/protocol/ProtocolVersion/getClosest, (Ljava/lang/String;)Lus/myles/ViaVersion/api/protocol/ProtocolVersion;]
+[method, us/myles/ViaVersion/api/protocol/ProtocolVersion/getId, ()I]
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/getProtocolSuggestions, (Ljava/lang/String;)[Ljava/lang/String;]
+Adding 0 imports
+End  Processing: com\github\creeper123123321\viafabric\util\ProtocolUtils.java
+
+Start Processing: de\flori2007\viaforge\gui\GuiProtocolSelector.java
+Warning: de\flori2007\viaforge\gui\GuiProtocolSelector.java has CRLF line endings; consider switching to LF
+Rename class net/minecraft/client/gui/GuiScreen[527,536]::GuiScreen->GuiScreen
+[method, de/flori2007/viaforge/gui/GuiProtocolSelector/GuiProtocolSelector, (Lnet/minecraft/client/gui/GuiScreen;)V]
+FOUND CONSTR method de/flori2007/viaforge/gui/GuiProtocolSelector/GuiProtocolSelector (Lnet/minecraft/client/gui/GuiScreen;)V de/flori2007/viaforge/gui/GuiProtocolSelector
+Rename class net/minecraft/client/gui/GuiScreen[577,586]::GuiScreen->GuiScreen
+Rename method net/minecraft/client/gui/GuiScreen/initGui ()V[664,671]::initGui->func_73866_w_
+Rename method net/minecraft/client/gui/GuiScreen/initGui ()V[696,703]::initGui->func_73866_w_
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[721,731]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename class net/minecraft/client/gui/GuiButton[744,753]::GuiButton->GuiButton
+Rename field net/minecraft/client/gui/GuiScreen/width[757,762]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/height[783,789]::height->field_146295_m
+Rename field net/minecraft/client/gui/GuiScreen/mc[868,870]::mc->field_146297_k
+Rename field net/minecraft/client/gui/GuiScreen/width[884,889]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/height[900,906]::height->field_146295_m
+Rename field net/minecraft/client/gui/GuiScreen/height[920,926]::height->field_146295_m
+Rename method net/minecraft/client/gui/GuiScreen/actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V[986,1001]::actionPerformed->func_146284_a
+Rename class net/minecraft/client/gui/GuiButton[1000,1009]::GuiButton->GuiButton
+Rename method net/minecraft/client/gui/GuiSlot/actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V[1066,1081]::actionPerformed->func_148147_a
+Rename field net/minecraft/client/gui/GuiButton/id[1137,1139]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[1170,1172]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1185,1201]::displayGuiScreen->func_147108_a
+Rename method net/minecraft/client/gui/GuiScreen/handleMouseInput ()V[1245,1261]::handleMouseInput->func_146274_d
+Rename method net/minecraft/client/gui/GuiSlot/handleMouseInput ()V[1295,1311]::handleMouseInput->func_178039_p
+Rename method net/minecraft/client/gui/GuiScreen/handleMouseInput ()V[1326,1342]::handleMouseInput->func_146274_d
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[1380,1390]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/GuiSlot/drawScreen (IIF)V[1473,1483]::drawScreen->func_148128_a
+[method, org/lwjgl/opengl/GL11/glPushMatrix, ()V]
+[method, org/lwjgl/opengl/GL11/glScalef, (FFF)V]
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[1623,1641]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[1641,1656]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[1692,1697]::width->field_146294_l
+[method, org/lwjgl/opengl/GL11/glPopMatrix, ()V]
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[1769,1779]::drawScreen->func_73863_a
+[method, de/flori2007/viaforge/gui/GuiProtocolSelector/SlotList/SlotList, (Lnet/minecraft/client/Minecraft;IIIII)V]
+FOUND CONSTR method de/flori2007/viaforge/gui/GuiProtocolSelector/SlotList/SlotList (Lnet/minecraft/client/Minecraft;IIIII)V de/flori2007/viaforge/gui/GuiProtocolSelector/SlotList
+Rename class net/minecraft/client/Minecraft[1904,1913]::Minecraft->Minecraft
+Rename method net/minecraft/client/gui/GuiSlot/getSize ()I[2150,2157]::getSize->func_148127_b
+[method, de/flori2007/viaforge/utils/ProtocolSorter/getProtocolVersions, ()Ljava/util/LinkedList;]
+[method, java/util/Collection/size, ()I]
+Rename method net/minecraft/client/gui/GuiSlot/elementClicked (IZII)V[2284,2298]::elementClicked->func_148144_a
+[method, de/flori2007/viaforge/utils/ProtocolSorter/getProtocolVersions, ()Ljava/util/LinkedList;]
+[method, java/util/List/get, (I)Ljava/lang/Object;]
+[method, us/myles/ViaVersion/api/protocol/ProtocolVersion/getVersion, ()I]
+Rename method net/minecraft/client/gui/GuiSlot/isSelected (I)Z[2489,2499]::isSelected->func_148131_a
+Rename method net/minecraft/client/gui/GuiSlot/drawBackground ()V[2590,2604]::drawBackground->func_148123_a
+Rename method net/minecraft/client/gui/GuiScreen/drawDefaultBackground ()V[2620,2641]::drawDefaultBackground->func_146276_q_
+Rename method net/minecraft/client/gui/GuiSlot/drawSlot (IIIIII)V[2690,2698]::drawSlot->func_180791_a
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2765,2783]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiSlot/mc[2778,2780]::mc->field_148161_k
+Rename field net/minecraft/client/Minecraft/fontRendererObj[2793,2808]::fontRendererObj->field_71466_p
+[method, de/flori2007/viaforge/utils/ProtocolSorter/getProtocolVersions, ()Ljava/util/LinkedList;]
+[method, java/util/List/get, (I)Ljava/lang/Object;]
+[method, us/myles/ViaVersion/api/protocol/ProtocolVersion/getVersion, ()I]
+[method, com/github/creeper123123321/viafabric/util/ProtocolUtils/getProtocolName, (I)Ljava/lang/String;]
+[method, de/flori2007/viaforge/utils/ProtocolSorter/getProtocolVersions, ()Ljava/util/LinkedList;]
+[method, java/util/List/get, (I)Ljava/lang/Object;]
+[method, us/myles/ViaVersion/api/protocol/ProtocolVersion/getVersion, ()I]
+Rename field net/minecraft/client/gui/GuiSlot/width[3063,3068]::width->field_148155_a
+Import: net.minecraft.client.Minecraft
+Import: net.minecraft.client.gui.GuiButton
+Import: net.minecraft.client.gui.GuiScreen
+Import: net.minecraft.client.gui.GuiSlot
+Adding 0 imports
+End  Processing: de\flori2007\viaforge\gui\GuiProtocolSelector.java
+
+Start Processing: de\flori2007\viaforge\platform\ViaBackwardsPlatformImplementation.java
+Warning: de\flori2007\viaforge\platform\ViaBackwardsPlatformImplementation.java has CRLF line endings; consider switching to LF
+[method, de/flori2007/viaforge/platform/ViaBackwardsPlatformImplementation/ViaBackwardsPlatformImplementation, ()V]
+FOUND CONSTR method de/flori2007/viaforge/platform/ViaBackwardsPlatformImplementation/ViaBackwardsPlatformImplementation ()V de/flori2007/viaforge/platform/ViaBackwardsPlatformImplementation
+[method, nl/matsv/viabackwards/ViaBackwards/init, (Lnl/matsv/viabackwards/api/ViaBackwardsPlatform;Lnl/matsv/viabackwards/api/ViaBackwardsConfig;)V]
+[method, nl/matsv/viabackwards/api/ViaBackwardsConfig/addCustomEnchantsToLore, ()Z]
+[method, nl/matsv/viabackwards/api/ViaBackwardsConfig/addTeamColorTo1_13Prefix, ()Z]
+[method, nl/matsv/viabackwards/api/ViaBackwardsConfig/isFix1_13FacePlayer, ()Z]
+[method, nl/matsv/viabackwards/api/ViaBackwardsConfig/alwaysShowOriginalMobName, ()Z]
+[method, nl/matsv/viabackwards/api/ViaBackwardsPlatform/init, (Ljava/io/File;)V]
+Rename class net/minecraft/client/Minecraft[1022,1031]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1032,1044]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/mcDataDir[1047,1056]::mcDataDir->field_71412_D
+[method, nl/matsv/viabackwards/api/ViaBackwardsPlatform/getLogger, ()Ljava/util/logging/Logger;]
+[method, us/myles/ViaVersion/api/Via/getPlatform, ()Lus/myles/ViaVersion/api/platform/ViaPlatform;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getLogger, ()Ljava/util/logging/Logger;]
+[method, nl/matsv/viabackwards/api/ViaBackwardsPlatform/disable, ()V]
+[method, nl/matsv/viabackwards/api/ViaBackwardsPlatform/isOutdated, ()Z]
+[method, nl/matsv/viabackwards/api/ViaBackwardsPlatform/getDataFolder, ()Ljava/io/File;]
+Rename class net/minecraft/client/Minecraft[1359,1368]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1369,1381]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/mcDataDir[1384,1393]::mcDataDir->field_71412_D
+Import: net.minecraft.client.Minecraft
+Adding 0 imports
+End  Processing: de\flori2007\viaforge\platform\ViaBackwardsPlatformImplementation.java
+
+Start Processing: de\flori2007\viaforge\platform\ViaRewindPlatformImplementation.java
+Warning: de\flori2007\viaforge\platform\ViaRewindPlatformImplementation.java has CRLF line endings; consider switching to LF
+[method, de/flori2007/viaforge/platform/ViaRewindPlatformImplementation/ViaRewindPlatformImplementation, ()V]
+FOUND CONSTR method de/flori2007/viaforge/platform/ViaRewindPlatformImplementation/ViaRewindPlatformImplementation ()V de/flori2007/viaforge/platform/ViaRewindPlatformImplementation
+[method, de/gerrygames/viarewind/api/ViaRewindPlatform/init, (Lde/gerrygames/viarewind/api/ViaRewindConfig;)V]
+[method, de/gerrygames/viarewind/api/ViaRewindConfig/getCooldownIndicator, ()Lde/gerrygames/viarewind/api/ViaRewindConfig$CooldownIndicator;]
+[method, de/gerrygames/viarewind/api/ViaRewindConfig/isReplaceAdventureMode, ()Z]
+[method, de/gerrygames/viarewind/api/ViaRewindConfig/isReplaceParticles, ()Z]
+[method, de/gerrygames/viarewind/api/ViaRewindPlatform/getLogger, ()Ljava/util/logging/Logger;]
+[method, us/myles/ViaVersion/api/Via/getPlatform, ()Lus/myles/ViaVersion/api/platform/ViaPlatform;]
+[method, us/myles/ViaVersion/api/platform/ViaPlatform/getLogger, ()Ljava/util/logging/Logger;]
+Adding 0 imports
+End  Processing: de\flori2007\viaforge\platform\ViaRewindPlatformImplementation.java
+
+Start Processing: de\flori2007\viaforge\utils\ProtocolSorter.java
+Warning: de\flori2007\viaforge\utils\ProtocolSorter.java has CRLF line endings; consider switching to LF
+[method, java/lang/Class/getDeclaredFields, ()[Ljava/lang/reflect/Field;]
+[method, java/lang/reflect/Field/getType, ()Ljava/lang/Class;]
+[method, java/lang/Object/equals, (Ljava/lang/Object;)Z]
+[method, java/lang/reflect/Field/get, (Ljava/lang/Object;)Ljava/lang/Object;]
+[method, us/myles/ViaVersion/api/protocol/ProtocolVersion/getName, ()Ljava/lang/String;]
+[method, java/lang/String/equals, (Ljava/lang/Object;)Z]
+[method, de/flori2007/viaforge/utils/ProtocolSorter/getProtocolVersions, ()Ljava/util/LinkedList;]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, java/lang/Throwable/printStackTrace, ()V]
+[method, java/util/Collections/reverse, (Ljava/util/List;)V]
+[method, de/flori2007/viaforge/utils/ProtocolSorter/getProtocolVersions, ()Ljava/util/LinkedList;]
+[method, de/flori2007/viaforge/utils/ProtocolSorter/getProtocolVersions, ()Ljava/util/LinkedList;]
+[method, de/flori2007/viaforge/utils/ProtocolSorter/getProtocolNamens, ()Ljava/util/LinkedList;]
+Adding 0 imports
+End  Processing: de\flori2007\viaforge\utils\ProtocolSorter.java
 

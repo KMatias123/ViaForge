@@ -7,6 +7,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiSlot;
+import net.minecraft.util.EnumChatFormatting;
 import org.lwjgl.opengl.GL11;
 
 import java.io.IOException;
@@ -50,7 +51,7 @@ public class GuiProtocolSelector extends GuiScreen {
 
         GL11.glPushMatrix();
         GL11.glScalef(2.0F, 2.0F, 2.0F);
-        this.drawCenteredString(this.fontRendererObj, "§6ViaForge",
+        this.drawCenteredString(this.fontRendererObj, EnumChatFormatting.GOLD.toString() + "ViaForge",
                 this.width / 4, 6, 16777215);
         GL11.glPopMatrix();
 
@@ -87,9 +88,9 @@ public class GuiProtocolSelector extends GuiScreen {
         @Override
         protected void drawSlot(int i, int i1, int i2, int i3, int i4, int i5) {
             drawCenteredString(mc.fontRendererObj,(ViaFabric.clientSideVersion ==
-                    ProtocolSorter.getProtocolVersions().get(i).getVersion() ? "§a" : "§4") + ProtocolUtils.
-                    getProtocolName(ProtocolSorter.getProtocolVersions().get(i).getVersion()),
-                    width / 2, i2 + 2, -1);
+                    ProtocolSorter.getProtocolVersions().get(i).getVersion() ? EnumChatFormatting.GREEN.toString() :
+                            EnumChatFormatting.DARK_RED.toString()) + ProtocolUtils.getProtocolName(ProtocolSorter.
+                            getProtocolVersions().get(i).getVersion()), width / 2, i2 + 2, -1);
         }
     }
 }
