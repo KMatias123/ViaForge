@@ -34,9 +34,4 @@ public class ProtocolSorter {
         return protocolVersions;
     }
 
-    public static LinkedList<String> getProtocolNamens() {
-        LinkedList<String> s = new LinkedList<>();
-        getProtocolVersions().forEach(a -> s.add(a.getName()));
-        return s;
-    }
 }
