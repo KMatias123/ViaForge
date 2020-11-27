@@ -33,7 +33,7 @@ public class ViaBackwardsPlatformImplementation implements ViaBackwardsPlatform 
                 return true;
             }
         });
-        init(Minecraft.getMinecraft().mcDataDir);
+        init(Minecraft.getMinecraft().gameDir);
     }
 
     @Override
@@ -53,6 +53,6 @@ public class ViaBackwardsPlatformImplementation implements ViaBackwardsPlatform 
 
     @Override
     public File getDataFolder() {
-        return Minecraft.getMinecraft().mcDataDir;
+        return Minecraft.getMinecraft().gameDir;
     }
 }

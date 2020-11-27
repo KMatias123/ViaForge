@@ -93,7 +93,7 @@ public class ViaFabric {
         Field addUrl = loader.getClass().getDeclaredField("ucp");
         addUrl.setAccessible(true);
         URLClassPath ucp = (URLClassPath) addUrl.get(loader);
-        final File[] files = new File(Minecraft.getMinecraft().mcDataDir, "mods").listFiles();
+        final File[] files = new File(Minecraft.getMinecraft().gameDir, "mods").listFiles();
         if (files != null) {
             for (final File f : files) {
                 if (f.isFile() && f.getName().startsWith("Via") && f.getName().toLowerCase().endsWith(".jar")) {

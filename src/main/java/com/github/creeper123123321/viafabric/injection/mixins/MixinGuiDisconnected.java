@@ -28,7 +28,6 @@ public abstract class MixinGuiDisconnected extends GuiScreen {
 
     @Inject(method = "drawScreen", at = @At("RETURN"))
     public void injectDrawScreen(int p_drawScreen_1_, int p_drawScreen_2_, float p_drawScreen_3_, CallbackInfo ci) {
-        mc.fontRendererObj.drawStringWithShadow("<-- Current Version",
-                104, 13, -1);
+        mc.fontRenderer.drawStringWithShadow("<-- Current Version", 104, 13, -1);
     }
 }

@@ -61,7 +61,7 @@ public class VRPlatform implements ViaPlatform<UUID> {
     private final ViaAPI<UUID> api;
 
     public VRPlatform() {
-        Path configDir = Minecraft.getMinecraft().mcDataDir.toPath().resolve("ViaFabric");
+        Path configDir = Minecraft.getMinecraft().gameDir.toPath().resolve("ViaFabric");
         config = new VRViaConfig(configDir.resolve("viaversion.yml").toFile());
         dataFolder = configDir.toFile();
         connectionManager = new VRConnectionManager();
@@ -71,7 +71,7 @@ public class VRPlatform implements ViaPlatform<UUID> {
     public static MinecraftServer getServer() {
         // In 1.8.9 integrated server instance exists even if it's not running
         if (!Minecraft.getMinecraft().isIntegratedServerRunning()) return null;
-        return MinecraftServer.getServer();
+        return Minecraft.getMinecraft().getIntegratedServer();
     }
 
     @Override

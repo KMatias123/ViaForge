@@ -27,7 +27,6 @@ public abstract class MixinNetworkManagerChInit {
             channel.pipeline()
                     .addBefore("encoder", CommonTransformer.HANDLER_ENCODER_NAME, new VREncodeHandler(user))
                     .addBefore("decoder", CommonTransformer.HANDLER_DECODER_NAME, new VRDecodeHandler(user));
-            System.out.println("aaaa");
         }
     }
 }

@@ -54,10 +54,9 @@ targetCompatibility = JavaVersion.VERSION_1_8
 compileJava.options.encoding = 'windows-1252'
 
 minecraft {
-    version = "1.12.2-14.23.5.2768"
+    version = "1.12.2-14.23.5.2847"
     runDir = 'run'
-    mappings = "snapshot_20171003"
-    makeObfSourceJar = true
+    mappings = "stable_39"
 }
 
 dependencies {
